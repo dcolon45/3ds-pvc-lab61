@@ -1,0 +1,289 @@
+/* ============================================================
+   3D's PVC Innovative - Calculadora de Cotizaciones
+   WADE 1000L - Laboratorio 6.1
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #1a1a2e;
+  --color-accent: #c8a96e;
+  --color-bg: #f8f8f6;
+  --color-text-muted: #6b6b6b;
+  --color-border: #e0e0e0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+#main-header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo-accent {
+  color: var(--color-accent);
+}
+
+.header-sub {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.3rem;
+}
+
+/* ============================================================
+   SECCIÓN COTIZADOR
+   ============================================================ */
+
+.cotizador {
+  padding: 3rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h1,
+.section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: var(--color-text-muted);
+}
+
+.section-header.light h2 {
+  color: #fff;
+}
+
+.cotizador-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.cotizador-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #a8854a;
+}
+
+/* ============================================================
+   RESULTADO
+   ============================================================ */
+
+.resultado-box {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.resultado-box h2 {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.placeholder-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.resultado-total {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}
+
+/* ============================================================
+   HISTORIAL
+   ============================================================ */
+
+.historial {
+  padding: 3rem 0;
+  background-color: #fff;
+}
+
+.historial-lista {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.historial-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.historial-cliente {
+  font-weight: 600;
+  flex: 1;
+}
+
+.historial-detalle {
+  color: var(--color-text-muted);
+  flex: 1;
+  text-align: center;
+}
+
+.historial-total {
+  font-weight: 700;
+  color: var(--color-accent);
+  flex: 0 0 auto;
+}
+
+/* ============================================================
+   GALERÍA
+   ============================================================ */
+
+.galeria {
+  padding: 3rem 0;
+  background-color: var(--color-primary);
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galeria-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+#main-footer {
+  background-color: var(--color-primary);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+}
+
+#main-footer p:first-child {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .cotizador-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .historial-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D's PVC Innovative | Calculadora de Cotizaciones</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ==========================================
+       HEADER - Encabezado principal
+       Elemento semántico: <header>
+  ========================================== -->
+  <header id="main-header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-accent">3D's</span> PVC Innovative
+      </div>
+      <p class="header-sub">Calculadora de Cotizaciones</p>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN - Contenido principal
+       Elemento semántico: <main>
+  ========================================== -->
+  <main>
+
+    <!-- ==========================================
+         SECCIÓN: Formulario de cotización
+         Elemento semántico: <section>
+    ========================================== -->
+    <section class="cotizador" id="cotizador">
+      <div class="container">
+        <div class="section-header">
+          <h1>Calcula tu Proyecto</h1>
+          <p>Selecciona el tipo de instalación y obtén un estimado al instante</p>
+        </div>
+
+        <div class="cotizador-grid">
+
+          <!-- Formulario -->
+          <form id="formCotizacion" class="cotizador-form">
+
+            <div class="form-group">
+              <label for="tipoProyecto">Tipo de proyecto</label>
+              <select id="tipoProyecto" name="tipoProyecto">
+                <option value="cocina">Cocina en PVC</option>
+                <option value="fachada">Fachada en PVC</option>
+                <option value="ambos">Cocina + Fachada</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="piesCuadrados">Área aproximada (pies cuadrados)</label>
+              <input type="number" id="piesCuadrados" name="piesCuadrados" min="1" value="100" />
+            </div>
+
+            <div class="form-group">
+              <label for="acabado">Acabado</label>
+              <select id="acabado" name="acabado">
+                <option value="estandar">Estándar</option>
+                <option value="premium">Premium</option>
+                <option value="luxury">Luxury</option>
+              </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="instalacion" name="instalacion" checked />
+                Incluir instalación profesional
+              </label>
+            </div>
+
+            <button type="button" id="btnCalcular" class="btn-primary">Calcular cotización</button>
+
+          </form>
+
+          <!-- Resultado -->
+          <aside class="resultado-box" id="resultadoBox">
+            <h2>Resumen de tu cotización</h2>
+            <div id="resumenContenido">
+              <p class="placeholder-text">Completa el formulario y presiona "Calcular cotización" para ver tu estimado.</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN: Historial de cotizaciones (arreglo de objetos)
+    ========================================== -->
+    <section class="historial" id="historial">
+      <div class="container">
+        <div class="section-header">
+          <h2>Historial de Cotizaciones de Ejemplo</h2>
+          <p>Estos datos se generan automáticamente con JavaScript al cargar la página</p>
+        </div>
+        <ul id="listaHistorial" class="historial-lista">
+          <!-- Se llena dinámicamente con JavaScript -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN: Galería (HTML5 + figure/figcaption)
+    ========================================== -->
+    <section class="galeria" id="galeria">
+      <div class="container">
+        <div class="section-header light">
+          <h2>Proyectos Realizados</h2>
+        </div>
+        <div class="galeria-grid">
+          <figure class="galeria-item">
+            <img src="images/proyecto1.jpg" alt="Cocina moderna en PVC blanco" />
+            <figcaption>Cocina – Blanco Mate</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="images/proyecto2.jpg" alt="Cocina gris antracita" />
+            <figcaption>Cocina – Gris Antracita</figcaption>
+          </figure>
+          <figure class="galeria-item">
+            <img src="images/proyecto4.jpg" alt="Fachada residencial gris" />
+            <figcaption>Fachada – Gris Cemento</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       Elemento semántico: <footer>
+  ========================================== -->
+  <footer id="main-footer">
+    <div class="container">
+      <p><span class="logo-accent">3D's</span> PVC Innovative</p>
+      <p class="footer-copy">© 2026 3D's PVC Innovative. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       Enlace al archivo JavaScript externo
+  ========================================== -->
+  <script src="script.js"></script>
+
+</body>
+</html>
